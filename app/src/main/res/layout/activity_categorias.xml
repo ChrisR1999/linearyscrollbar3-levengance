@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Categorias">
+
+    <LinearLayout
+        android:id="@+id/linearToolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbarSinBarra"
+            layout="@layout/toolbar_sin_busqueda" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/aviso1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/linearToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<TextView
+                android:id="@+id/aviso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aviso"
+                android:textAlignment="center"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/aviso2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aviso2"
+                android:textAlignment="center"
+                android:textStyle="bold|italic" /> -->
+
+            <ImageButton
+                android:id="@+id/marvel"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/marvel"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/marvelbanner2" />
+
+            <ImageButton
+                android:id="@+id/dcComics"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/dcComics"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/dcbanner2" />
+
+
+            <ImageButton
+                android:id="@+id/multi"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/Multi"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/gir" />
+
+            <ImageButton
+                android:id="@+id/anime"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/anime"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/anime" />
+
+
+            <ImageButton
+                android:id="@+id/manga"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/manga"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/manga" />
+
+
+            <ImageButton
+                android:id="@+id/darkHorse"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/dark"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/darkhorsebanner2" />
+
+            <ImageButton
+                android:id="@+id/imageComics"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/image"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/image" />
+
+            <ImageButton
+                android:id="@+id/vertigo"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/vertigo"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/vertigo" />
+
+
+            <ImageButton
+                android:id="@+id/others"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/otros"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/otros" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5146175048698339/3586112095"></com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/might_cover"
+    tools:context=".Recomendacion">
+
+    <LinearLayout
+        android:id="@+id/linearToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbarSinBarra"
+            layout="@layout/toolbar_sin_busqueda" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRecomendaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearToolbar"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorBotonInicio"
+                android:onClick="openCategories"
+                android:text="@string/Categorias"
+                android:textColor="?android:attr/colorForeground"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorBotonInicio5"
+                android:onClick="rechargeList"
+                android:text="@string/recargarLista"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <com.google.android.gms.ads.AdView
+
+            android:id="@+id/adView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-5146175048698339/3586112095" />
+
+
+        <ListView
+            android:id="@+id/listMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:divider="#404040"
+            android:dividerHeight="2dp"
+            android:foregroundGravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

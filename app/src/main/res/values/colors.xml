@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#00796B</color>
+    <color name="primary_light">#B2DFDB</color>
+    <color name="primarySecondChoice">#d1005c</color>
+    <color name="primaryDarkSecondChoice">#a60157</color>
+    <color name="primaryLightSecondChoice">#e90068</color>
+    <color name="cancelColor">#970005</color>
+    <color name="accent">#7C4DFF</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="Negro">#000000</color>
+    <color name="nameMultimedia">#c8000000</color>
+    <color name="textMultimedia">#c4ffffff</color>
+    <color name="amarillo">#d6c41d</color>
+    <color name="colorBotonInicio">#d29c20</color>
+    <color name="colorBotonInicio2">#8b9c20</color>
+    <color name="colorBotonInicio3">#e68b5b09</color>
+    <color name="colorBotonInicio4">#151d20</color>
+    <color name="colorBotonInicio5">#344688</color>
+    <color name="colorBotonInicio6">#ba4688</color>
+    <color name="colorBotonInicio7">#ba393f</color>
+    <color name="colorBotonInicio8">#fd173f</color>
+    <color name="colorBotonInicio9">#f0f864</color>
+    <color name="colorBotonInicio10">#ecf3f9</color>
+
+</resources>

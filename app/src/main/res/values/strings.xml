@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">ALL MIGHT COMICS...</string>
+    <string name="dcComics">DC</string>
+    <string name="marvel">Marvel</string>
+    <string name="manga">Manga</string>
+    <string name="image">Image</string>
+    <string name="dark">Dark</string>
+    <string name="vertigo">Vertigo</string>
+    <string name="aviso">La mayoría de los enlaces en esta APP son tomados de otras fuentes,
+        cualquier problema con alguno de los enlaces, dudas o sugerencia; mandar un correo a:\n
+        <b>carlitox_r20_banana@hotmail.com</b>
+    </string>
+    <string name="otros">Otros</string>
+    <string name="abrir">OPEN/ABRIR</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="recomendacione">RECOMENDACIONES</string>
+    <string name="masreco">MAS RECOMENDACIONES</string>
+    <string name="Categorias">CATEGORIAS</string>
+    <string name="Multi">Multi</string>
+    <string name="anime">Anime</string>
+    <string name="categoriasMenu">Categorias</string>
+    <string name="recomendacion">Recomendaciones</string>
+    <string name="recargarLista">Actualizar</string>
+    <string name="textoEjemplo">Esto es un gran texto de ejemplo</string>
+    <string name="opciones">Opciones</string>
+    <string name="contacto">Contacto</string>
+    <string name="cache">Permitir almacenar imagenes en la cache: </string>
+    <string name="notificaciones">Permitir notificaciones: </string>
+    <string name="portadas">Permitir portadas: </string>
+    <string name="cacheHabilitada">Cache habilitada…</string>
+    <string name="cacheInhabilitada">Cache inhabilitada…</string>
+    <string name="borrarCache">BORRAR CACHE EXISTENTE</string>
+
+</resources>
