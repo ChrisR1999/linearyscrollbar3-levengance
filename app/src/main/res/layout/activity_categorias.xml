@@ -22,8 +22,10 @@
         android:id="@+id/aviso1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/linearToolbar"
         android:layout_alignParentStart="true"
-        android:layout_below="@id/linearToolbar">
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-56dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,7 +56,7 @@
                 android:contentDescription="@string/marvel"
                 android:onClick="iralcomic"
                 android:scaleType="fitXY"
-                android:src="@mipmap/marvelbanner2" />
+                android:src="@mipmap/marvel" />
 
             <ImageButton
                 android:id="@+id/dcComics"
@@ -64,7 +66,9 @@
                 android:contentDescription="@string/dcComics"
                 android:onClick="iralcomic"
                 android:scaleType="fitXY"
-                android:src="@mipmap/dcbanner2" />
+                android:src="@mipmap/dc" />
+
+
 
 
             <ImageButton
@@ -75,7 +79,7 @@
                 android:contentDescription="@string/Multi"
                 android:onClick="iralcomic"
                 android:scaleType="fitXY"
-                android:src="@mipmap/gir" />
+                android:src="@mipmap/peliculas" />
 
             <ImageButton
                 android:id="@+id/anime"
@@ -97,6 +101,17 @@
                 android:onClick="iralcomic"
                 android:scaleType="fitXY"
                 android:src="@mipmap/manga" />
+
+            <ImageButton
+                android:id="@+id/cari"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/cartoons"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/seri" />
+
 
 
             <ImageButton
@@ -120,6 +135,16 @@
                 android:src="@mipmap/image" />
 
             <ImageButton
+                android:id="@+id/series"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/series"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/cartoons" />
+
+            <ImageButton
                 android:id="@+id/vertigo"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
@@ -139,6 +164,19 @@
                 android:onClick="iralcomic"
                 android:scaleType="fitXY"
                 android:src="@mipmap/otros" />
+
+            <ImageButton
+                android:id="@+id/libros"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/libros"
+                android:onClick="iralcomic"
+                android:scaleType="fitXY"
+                android:src="@mipmap/libros" />
+
+
+
 
         </LinearLayout>
     </ScrollView>

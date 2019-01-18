@@ -5,7 +5,7 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 public class ParametrosBD extends SQLiteAssetHelper {
     private static final String DATABASE_NAME = "comics.db";
-    private static final int DATABASE_VERSION = 17;
+    private static final int DATABASE_VERSION = 18;
 
     public ParametrosBD(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#009688</color>
+    <color name="primary">#34aba0</color>
     <color name="primary_dark">#00796B</color>
-    <color name="primary_light">#B2DFDB</color>
+    <color name="primary_light">#b2dfdb</color>
     <color name="primarySecondChoice">#d1005c</color>
     <color name="primaryDarkSecondChoice">#a60157</color>
     <color name="primaryLightSecondChoice">#e90068</color>
