@@ -33,7 +33,7 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/oval_search_bar"
             android:drawableEnd="@drawable/ic_search_24"
-            android:hint="Buscar por nombre..."
+            android:hint="@string/toolbarHint"
             android:imeOptions="actionSearch"
             android:inputType="text"
             android:maxLines="1"
