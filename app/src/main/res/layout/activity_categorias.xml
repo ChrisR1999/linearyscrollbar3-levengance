@@ -22,8 +22,8 @@
         android:id="@+id/aviso1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linearToolbar"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/linearToolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -182,6 +182,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-5146175048698339/3586112095"></com.google.android.gms.ads.AdView>
+        ads:adUnitId="ca-app-pub-5146175048698339/3586112095" />
 
 </RelativeLayout>
