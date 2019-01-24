@@ -6,8 +6,8 @@ android {
         applicationId "com.arturo.almaitu"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 11
-        versionName "2.5"
+        versionCode 13
+        versionName "2.5.8"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
