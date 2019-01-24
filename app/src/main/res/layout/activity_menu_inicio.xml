@@ -18,11 +18,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/colorBotonInicio7"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:paddingEnd="20dp"
             android:paddingStart="20dp"
-            android:paddingTop="10dp"
-            android:text="@string/categoriasMenu"
+            android:paddingTop="5dp"
+            android:text="@string/Categorias"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -32,11 +32,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/colorBotonInicio9"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:paddingEnd="20dp"
             android:paddingStart="20dp"
-            android:paddingTop="10dp"
+            android:paddingTop="5dp"
             android:text="@string/recomendacion"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/libraryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorBotonInicio2"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:text="@string/biblioteca"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -46,10 +60,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/colorBotonInicio5"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:paddingEnd="20dp"
             android:paddingStart="20dp"
-            android:paddingTop="10dp"
+            android:paddingTop="5dp"
             android:text="@string/opciones"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -60,10 +74,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/colorBotonInicio10"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:paddingEnd="20dp"
             android:paddingStart="20dp"
-            android:paddingTop="10dp"
+            android:paddingTop="5dp"
             android:text="@string/contacto"
             android:textSize="16sp"
             android:textStyle="bold" />

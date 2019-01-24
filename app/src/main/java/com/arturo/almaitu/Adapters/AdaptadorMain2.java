@@ -9,12 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.arturo.almaitu.Alerts.AlertLinks;
 import com.arturo.almaitu.Modelos.ModeloMultimedia;
 import com.arturo.almaitu.R;
 import com.arturo.almaitu.Utillities.CacheUtilities;
+import com.arturo.almaitu.Utillities.DisplayUtillities;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.InterstitialAd;
 
@@ -69,6 +72,12 @@ public class AdaptadorMain2 extends BaseAdapter {
         dir = items.get(position);
         name = (TextView) v.findViewById(R.id.linearName);
         image = (ImageView) v.findViewById(R.id.linearImage);
+        name.setWidth((int) (DisplayUtillities.getSizeX() / 2));
+        RelativeLayout.LayoutParams imageParams = new RelativeLayout.LayoutParams(
+                (int) (DisplayUtillities.getSizeX() / 2),
+                (int) (DisplayUtillities.getSizeY() / 2.15)
+        );
+        image.setLayoutParams(imageParams);
         name.setText(dir.getNombre());
         foto = dir.getNombreImagen();
         if (CacheUtilities.getCacheStatus() == 1) {
@@ -85,13 +94,13 @@ public class AdaptadorMain2 extends BaseAdapter {
                 } else {
                     Log.d("TAG", "The interstitial wasn't loaded yet.");
                 }
-                openDialog(dir.getNombre(), image.getDrawable());
+                openDialog(dir.getNombre(), image);
             }
         });
         return v;
     }
 
-    private void openDialog(String comicName, Drawable image) {
+    private void openDialog(String comicName, ImageView image) {
         AlertLinks alert = new AlertLinks(activity, contexto, comicName, image);
     }
 }

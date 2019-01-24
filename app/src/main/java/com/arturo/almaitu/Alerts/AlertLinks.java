@@ -5,12 +5,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,49 +20,53 @@ import java.util.ArrayList;
 
 public class AlertLinks extends AlertDialog {
 
-    private Drawable image;
+    private ImageView image;
     private String title;
     private Context context;
     private Activity activity;
 
-    public AlertLinks(Activity activity, Context context, String title, Drawable image) {
+    public AlertLinks(Activity activity, Context context, String title, ImageView image) {
         super(context);
         this.activity = activity;
         this.context = context;
         this.title = title;
-        this.image = image;
+        this.image = new ImageView(context);
+        this.image.setLayoutParams(image.getLayoutParams());
+        this.image.setScaleType(ImageView.ScaleType.FIT_XY);
+        this.image.setImageDrawable(image.getDrawable());
         initDialog();
     }
 
     private void initDialog() {
         final ArrayList<ModeloMultimedia> linkList = new ControladorLinks(context).getLinksAndDescriptions(title);
-        //final AlertDialog.Builder build = new AlertDialog.Builder(new ContextThemeWrapper(activity, android.R.style.Theme_Holo_Light_DarkActionBar));
-        //final AlertDialog.Builder build = new AlertDialog.Builder(new ContextThemeWrapper(activity, android.R.style.Theme_DeviceDefault_Dialog));
         final AlertDialog.Builder build = new AlertDialog.Builder(activity);
-        final ScrollView scroll = new ScrollView(context);
-        final ViewGroup.LayoutParams scrollParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(575, 850);
         final LinearLayout linear = new LinearLayout(context);
-        final ImageView image = new ImageView(context);
+        final ScrollView scroll = new ScrollView(context);
+        final LinearLayout.LayoutParams scrollParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        final LinearLayout.LayoutParams linearParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+
 
         linear.setGravity(Gravity.CENTER);
+        linear.setLayoutParams(linearParams);
         linear.setOrientation(LinearLayout.VERTICAL);
 
+        scrollParams.setMargins(0, 10, 0, 0);
         scroll.setLayoutParams(scrollParams);
         scroll.addView(linear);
 
-        image.setImageDrawable(this.image);
-        image.setScaleType(ImageView.ScaleType.FIT_XY);
-
-        params.setMargins(0, 45, 0, 10);
-        image.setLayoutParams(params);
         linear.addView(image);
 
         for (final ModeloMultimedia s : linkList) {
             final Button[] link = new Button[3];
             for (int i = 0; i < link.length; i++) {
                 link[i] = new Button(context);
-                addLink(linear, link[i], i, s);
+                addLink(linear, link[i], i, s, image.getLayoutParams().width);
             }
         }
 
@@ -82,7 +83,7 @@ public class AlertLinks extends AlertDialog {
         build.show();
     }
 
-    private void addLink(LinearLayout linear, Button button, int index, ModeloMultimedia model) {
+    private void addLink(LinearLayout linear, Button button, int index, ModeloMultimedia model, int width) {
         String link = "";
         String description = " ";
         switch (index) {
@@ -101,7 +102,7 @@ public class AlertLinks extends AlertDialog {
         }
         if ((link != null) && (description != null)) {
             final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    650,
+                    width,
                     LinearLayout.LayoutParams.WRAP_CONTENT
             );
             params.setMargins(0, 10, 0, 0);

@@ -13,22 +13,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:descendantFocusability="beforeDescendants"
-        android:focusableInTouchMode="true">
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/backButtonToolbar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_arrow_back_black_24dp" />
 
         <EditText
             android:id="@+id/comicSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@color/primary_light"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/oval_search_bar"
             android:drawableEnd="@drawable/ic_search_24"
             android:hint="Buscar por nombre..."
             android:imeOptions="actionSearch"
             android:inputType="text"
             android:maxLines="1"
             android:padding="6dp"
+            android:paddingStart="15dp"
             android:textColor="@color/primary_text"
-            android:textColorHint="@color/primary_text" />
+            android:textColorHint="@color/primary_text"
+            android:textSize="16sp" />
     </LinearLayout>
 
 </android.support.v7.widget.Toolbar>

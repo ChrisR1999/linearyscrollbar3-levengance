@@ -9,12 +9,14 @@ import android.widget.Button;
 
 import com.arturo.almaitu.Alerts.AlertGeneral;
 import com.arturo.almaitu.Utillities.CacheUtilities;
+import com.arturo.almaitu.Utillities.DisplayUtillities;
 
 public class MenuInicio extends AppCompatActivity {
 
     private Button categoryButton;
     private Button recomendButton;
     private Button optionsButton;
+    private Button libraryButton;
     private Button contactButton;
 
     @Override
@@ -25,12 +27,13 @@ public class MenuInicio extends AppCompatActivity {
     }
 
     private void initComponents() {
-        CacheUtilities cache;
         categoryButton = (Button) findViewById(R.id.categoryButton);
         recomendButton = (Button) findViewById(R.id.recomendButton);
         optionsButton = (Button) findViewById(R.id.optionsButton);
+        libraryButton = (Button) findViewById(R.id.libraryButton);
         contactButton = (Button) findViewById(R.id.contactButton);
-        cache = new CacheUtilities(this);
+        new DisplayUtillities(this);
+        new CacheUtilities(this);
 
         categoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +46,14 @@ public class MenuInicio extends AppCompatActivity {
         recomendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final Intent intent = new Intent(MenuInicio.this, Recomendacion.class);
+                startActivity(intent);
+            }
+        });
+
+        libraryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
                 final Intent intent = new Intent(MenuInicio.this, Recomendacion.class);
                 startActivity(intent);
             }

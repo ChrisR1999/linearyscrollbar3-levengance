@@ -7,11 +7,11 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import com.arturo.almaitu.Adapters.AdaptadorMain;
 import com.arturo.almaitu.Adapters.AdaptadorMain2;
 import com.arturo.almaitu.Controladores.ControladorLinks;
 import com.google.android.gms.ads.AdRequest;
@@ -27,6 +27,7 @@ public class VisorDeComics2 extends AppCompatActivity {
     private ArrayList comicsCards;
     private AdaptadorMain2 adapter;
     private Toolbar toolbar;
+    private Button backButtonToolbar;
     private EditText searchBar;
     public InterstitialAd mInterstitialAd;
     private AdView mAdView;
@@ -47,21 +48,18 @@ public class VisorDeComics2 extends AppCompatActivity {
         gridComics = (GridView) findViewById(R.id.gridMain);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         searchBar = (EditText) findViewById(R.id.comicSearch);
+        backButtonToolbar = (Button) findViewById(R.id.backButtonToolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp));
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+
+        backButtonToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 finish();
             }
         });
+
         searchBar.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 final String search = searchBar.getText().toString();
@@ -69,8 +67,12 @@ public class VisorDeComics2 extends AppCompatActivity {
             }
 
             @Override
-            public void afterTextChanged(Editable s) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
+
+            @Override
+            public void afterTextChanged(Editable s) {
             }
         });
         gridComics.setOnItemClickListener(new AdapterView.OnItemClickListener() {

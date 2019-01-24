@@ -86,13 +86,13 @@ public class AdaptadorMain extends BaseAdapter {
                 } else {
                     Log.d("TAG", "The interstitial wasn't loaded yet.");
                 }
-                openDialog(dir.getNombre(), comicImage.getDrawable());
+                openDialog(dir.getNombre(), comicImage);
             }
         });
         return v;
     }
 
-    private void openDialog(String comicName, Drawable image) {
+    private void openDialog(String comicName, ImageView image) {
         AlertLinks alert = new AlertLinks(activity, contexto, comicName, image);
     }
 }
