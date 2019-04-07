@@ -30,7 +30,7 @@ public class MenuInicio extends AppCompatActivity {
         categoryButton = (Button) findViewById(R.id.categoryButton);
         recomendButton = (Button) findViewById(R.id.recomendButton);
         optionsButton = (Button) findViewById(R.id.optionsButton);
-        libraryButton = (Button) findViewById(R.id.libraryButton);
+        //libraryButton = (Button) findViewById(R.id.libraryButton);
         contactButton = (Button) findViewById(R.id.contactButton);
         new DisplayUtillities(this);
         new CacheUtilities(this);
