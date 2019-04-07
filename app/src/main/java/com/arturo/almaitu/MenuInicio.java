@@ -51,13 +51,13 @@ public class MenuInicio extends AppCompatActivity {
             }
         });
 
-        libraryButton.setOnClickListener(new View.OnClickListener() {
+        /*libraryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 final Intent intent = new Intent(MenuInicio.this, Recomendacion.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         contactButton.setOnClickListener(new View.OnClickListener() {
             @Override
